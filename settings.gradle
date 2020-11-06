@@ -1,0 +1,3 @@
+include ':rive'
+include ':app', ':rive'
+rootProject.name = "SpaceReload"
