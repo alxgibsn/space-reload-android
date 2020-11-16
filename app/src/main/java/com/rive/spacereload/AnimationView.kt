@@ -2,7 +2,6 @@ package com.rive.spacereload
 
 import android.content.Context
 import android.graphics.Canvas
-import android.util.Log
 import android.view.View
 import app.rive.runtime.kotlin.*
 import kotlin.properties.Delegates
@@ -53,10 +52,6 @@ class AnimationView : View {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        redraw(canvas)
-    }
-
-    private fun redraw(canvas: Canvas) {
         val currentTime = System.currentTimeMillis()
         val elapsed = (currentTime - lastTime) / 1000f
         lastTime = currentTime
@@ -76,7 +71,6 @@ class AnimationView : View {
             val time = frames.toFloat() / pullInstance.animation.fps.toFloat()
             pullInstance.time(time * pos)
             pullInstance.apply(artboard, 1f)
-            pullInstance.advance(elapsed)
         } else {
             triggerInstance.apply(artboard, 1f)
             triggerInstance.advance(elapsed)

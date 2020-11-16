@@ -1,22 +1,13 @@
 package com.rive.spacereload
 
-import android.R.id
-//import android.R
 import android.content.Context
-import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver
 import android.widget.LinearLayout
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
 import app.rive.runtime.kotlin.*
 import com.liaoinstan.springview.container.BaseSimpleHeader
-import com.liaoinstan.springview.utils.DensityUtil
 import com.liaoinstan.springview.widget.SpringView
-
 
 class AnimatedHeader(context: Context, file: File) : BaseSimpleHeader() {
 
